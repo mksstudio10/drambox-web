@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/:path*",
+            "destination": "https://dramabox-api-rho.vercel.app/api/:path*"
+        },
+        {
+            "source": "/download/:path*",
+            "destination": "https://dramabox-api-rho.vercel.app/download/:path*"
+        }
+    ]
+}
