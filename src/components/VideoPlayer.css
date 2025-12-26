@@ -1,0 +1,260 @@
+.video-player-container {
+    width: 100%;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.video-element {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #71717a;
+    background: #000;
+}
+
+.video-placeholder svg {
+    width: 48px;
+    height: 48px;
+    opacity: 0.5;
+    fill: #71717a;
+}
+
+.video-placeholder p {
+    font-size: 0.875rem;
+    color: #71717a;
+}
+
+/* Settings Button */
+.video-settings-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 150ms ease;
+    z-index: 10;
+}
+
+.video-settings-btn:hover {
+    background: rgba(168, 85, 247, 0.8);
+}
+
+.video-settings-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Settings Menu */
+.video-settings-menu {
+    position: absolute;
+    top: 60px;
+    right: 12px;
+    background: rgba(18, 18, 26, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    z-index: 20;
+    min-width: 150px;
+}
+
+.settings-header {
+    padding: 12px 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #a1a1aa;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.settings-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background 150ms ease;
+}
+
+.settings-option:hover {
+    background: rgba(168, 85, 247, 0.2);
+}
+
+.settings-option.active {
+    color: #a855f7;
+}
+
+.settings-option svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.res-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.res-label {
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.res-desc {
+    font-size: 0.7rem;
+    color: #71717a;
+}
+
+/* Resolution Badge */
+.resolution-badge {
+    position: absolute;
+    bottom: 60px;
+    right: 12px;
+    padding: 4px 8px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #ffffff;
+    z-index: 5;
+}
+
+/* Controls Bar */
+.video-controls-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.video-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
+.video-title {
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+    color: #ffffff;
+}
+
+.video-episode {
+    padding: 4px 12px;
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+    color: #ffffff;
+}
+
+/* Navigation Buttons */
+.navigation-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 14px;
+    background: #1a1a25;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    color: #a1a1aa;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 150ms ease;
+    text-decoration: none;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background: rgba(168, 85, 247, 0.2);
+    border-color: #a855f7;
+    color: #ffffff;
+}
+
+.nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.nav-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+@media (max-width: 640px) {
+    .video-controls-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .video-title {
+        max-width: 100%;
+        font-size: 0.875rem;
+    }
+
+    .navigation-controls {
+        width: 100%;
+    }
+
+    .nav-btn {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .video-settings-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .video-settings-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+}

@@ -1,0 +1,75 @@
+.home-page {
+    min-height: 100vh;
+    padding-top: 56px;
+    padding-bottom: 80px;
+    background: #0a0a0f;
+}
+
+/* Main Content */
+.home-main {
+    padding: 1rem;
+}
+
+/* Banner Skeleton */
+.banner-skeleton {
+    border-radius: 0.75rem;
+    background: #1a1a25;
+}
+
+/* Section Title */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-title::before {
+    content: '';
+    width: 3px;
+    height: 16px;
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+    border-radius: 2px;
+}
+
+/* YouTube-Style Grid */
+.drama-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 0.75rem;
+}
+
+.skeleton-card {
+    min-width: 0;
+}
+
+.skeleton-card .skeleton {
+    background: #1a1a25;
+}
+
+@media (max-width: 768px) {
+    .home-main {
+        padding: 0.75rem;
+    }
+
+    .drama-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .drama-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

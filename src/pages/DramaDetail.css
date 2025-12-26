@@ -1,0 +1,212 @@
+.drama-detail-page {
+    min-height: 100vh;
+    padding-top: 56px;
+    padding-bottom: 80px;
+    background: #0a0a0f;
+}
+
+.detail-hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.detail-hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(40px);
+    opacity: 0.4;
+    transform: scale(1.2);
+}
+
+.detail-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(10, 10, 15, 0.6) 0%,
+            #0a0a0f 100%);
+}
+
+.detail-content {
+    position: relative;
+    padding: 2rem 1rem 3rem;
+}
+
+/* Loading State */
+.detail-loading {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+.detail-loading-info {
+    flex: 1;
+}
+
+.detail-loading .skeleton {
+    background: #1a1a25;
+}
+
+/* Main Info Section */
+.detail-main {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.detail-poster {
+    flex-shrink: 0;
+    width: 180px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.5), 0 0 40px rgba(168, 85, 247, 0.2);
+}
+
+.detail-poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.detail-info {
+    flex: 1;
+}
+
+.detail-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.detail-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #a1a1aa;
+    font-size: 0.875rem;
+}
+
+.stat svg {
+    width: 16px;
+    height: 16px;
+    stroke: #a1a1aa;
+}
+
+.detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.detail-tags .tag {
+    background: rgba(168, 85, 247, 0.2);
+    color: #a855f7;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+}
+
+.detail-description {
+    color: #a1a1aa;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.watch-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.watch-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.3);
+}
+
+.watch-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+}
+
+/* Episodes Section */
+.detail-episodes {
+    margin-top: 2rem;
+}
+
+.episodes-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.episodes-title::before {
+    content: '';
+    width: 3px;
+    height: 18px;
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .drama-detail-page {
+        padding-top: 52px;
+    }
+
+    .detail-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .detail-poster {
+        width: 150px;
+    }
+
+    .detail-title {
+        font-size: 1.5rem;
+    }
+
+    .detail-stats,
+    .detail-tags {
+        justify-content: center;
+    }
+
+    .detail-description {
+        text-align: left;
+    }
+
+    .watch-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

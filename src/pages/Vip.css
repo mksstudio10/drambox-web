@@ -1,0 +1,74 @@
+.vip-page {
+    min-height: 100vh;
+    padding-top: 56px;
+    padding-bottom: 80px;
+    background: #0a0a0f;
+}
+
+.vip-header {
+    padding: 2rem 0;
+    text-align: center;
+    background: linear-gradient(135deg,
+            rgba(168, 85, 247, 0.15) 0%,
+            rgba(236, 72, 153, 0.1) 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vip-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.vip-badge svg {
+    width: 16px;
+    height: 16px;
+    fill: #ffffff;
+}
+
+.vip-header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.vip-header p {
+    font-size: 0.875rem;
+    color: #a1a1aa;
+}
+
+.vip-content {
+    padding: 1rem;
+}
+
+.vip-count {
+    font-size: 0.875rem;
+    color: #a1a1aa;
+    margin-bottom: 1rem;
+}
+
+.vip-count strong {
+    color: #a855f7;
+}
+
+@media (max-width: 768px) {
+    .vip-header {
+        padding: 1.5rem 0;
+    }
+
+    .vip-header h1 {
+        font-size: 1.25rem;
+    }
+
+    .vip-content {
+        padding: 0.75rem;
+    }
+}

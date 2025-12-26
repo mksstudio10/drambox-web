@@ -1,0 +1,153 @@
+.profile-page {
+    min-height: 100vh;
+    padding-top: 56px;
+    padding-bottom: 80px;
+    background: #0a0a0f;
+}
+
+.profile-header {
+    padding: 2rem 0;
+    text-align: center;
+    background: linear-gradient(180deg,
+            #12121a 0%,
+            #0a0a0f 100%);
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    background: #1a1a25;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-avatar svg {
+    width: 40px;
+    height: 40px;
+    color: #71717a;
+    fill: #71717a;
+}
+
+.profile-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.profile-email {
+    font-size: 0.875rem;
+    color: #71717a;
+}
+
+.profile-content {
+    padding: 1rem;
+}
+
+/* Stats */
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background: #12121a;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #a855f7;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #71717a;
+}
+
+/* Menu */
+.profile-menu {
+    display: flex;
+    flex-direction: column;
+    background: #12121a;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    text-align: left;
+    cursor: pointer;
+    transition: background 150ms ease;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item:hover {
+    background: rgba(168, 85, 247, 0.1);
+}
+
+.menu-item svg {
+    width: 20px;
+    height: 20px;
+    color: #a1a1aa;
+    stroke: #a1a1aa;
+}
+
+.menu-item span {
+    flex: 1;
+    font-size: 0.875rem;
+    color: #ffffff;
+}
+
+.menu-item .arrow {
+    width: 16px;
+    height: 16px;
+    color: #71717a;
+    stroke: #71717a;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.login-btn:hover {
+    opacity: 0.9;
+}
+
+.app-version {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #71717a;
+    margin-top: 2rem;
+}

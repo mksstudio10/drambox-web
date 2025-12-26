@@ -1,0 +1,81 @@
+.drama-carousel {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.carousel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+}
+
+.carousel-title {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+}
+
+.carousel-controls {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.carousel-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    color: var(--color-text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.carousel-btn:hover {
+    background: var(--color-accent-primary);
+    border-color: var(--color-accent-primary);
+    color: var(--color-text-primary);
+}
+
+.carousel-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: var(--spacing-sm);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: var(--spacing-xs);
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-track>* {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+.skeleton-card {
+    min-width: 150px;
+}
+
+@media (max-width: 768px) {
+    .carousel-title {
+        font-size: var(--font-size-md);
+    }
+
+    .carousel-controls {
+        display: none;
+    }
+
+    .carousel-track {
+        gap: var(--spacing-xs);
+    }
+}
